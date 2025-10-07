@@ -26,7 +26,8 @@ This repository contains scripts to calculate mitochondrial DNA heteroplasmy fro
 python step2.py All_YYYMMDD.tsv
 
 
-[MT_Plot.pdf](https://github.com/user-attachments/files/22651014/MT_Plot.pdf)
+[MT_Plot_Sample_2D.pdf](https://github.com/user-attachments/files/22736247/MT_Plot_Sample_2D.pdf)
+
 [MT_Plot_Sample_3D.pdf](https://github.com/user-attachments/files/22736176/MT_Plot_Sample_3D.pdf)
 
 

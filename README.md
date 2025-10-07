@@ -22,3 +22,7 @@ python step2.py All_YYYMMDD.tsv
 
 
 [MT_Plot.pdf](https://github.com/user-attachments/files/22651014/MT_Plot.pdf)
+
+## Input File Specification
+
+The software expects input VCF files generated on the GRCh38 reference genome (VCF v4 format), with the chromosome column (CHROM) labeled as chrM. This is the standard convention for mitochondrial DNA in GRCh38-based VCF data.

@@ -7,11 +7,16 @@ This repository contains scripts to calculate mitochondrial DNA heteroplasmy fro
 
 ## Files
 
-- `run_step1.py`:  
+- `step1.py`:  
   Processes multiple mitochondrial VCF files (*.vcf) to calculate heteroplasmy rates at each variant position. Outputs a merged TSV file summarizing heteroplasmy rates per sample and position.
 
-- `run_step2.py`:  
-  Loads the merged TSV from `run_step1.py` and generates an interactive Plotly circular plot showing heteroplasmy rates by position with mitochondrial gene regions annotated.
+- `step2.py`:  
+  Loads the merged TSV from run_step1.py and generates an interactive Plotly circular plot showing heteroplasmy rates by position with mitochondrial gene regions annotated.
+  This script creates a 2D figure, where zoom in/out and panning on desired regions are freely possible for detailed inspection.
+
+- `step3.py`:  
+  Loads the merged TSV from run_step1.py and generates an interactive 3D circular plot representing heteroplasmy rates across samples.
+  The plot positions samples along the Z-axis with compressible height for better visualization of multiple samples and mitochondrial gene regions annotated in 3D.
 
 ## Usage
 
@@ -22,6 +27,8 @@ python step2.py All_YYYMMDD.tsv
 
 
 [MT_Plot.pdf](https://github.com/user-attachments/files/22651014/MT_Plot.pdf)
+[MT_Plot_Sample_3D.pdf](https://github.com/user-attachments/files/22736176/MT_Plot_Sample_3D.pdf)
+
 
 ## Input File Specification
 

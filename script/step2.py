@@ -11,7 +11,7 @@ def clean_and_convert(value):
 def plot_heteroplasmy(tsv_file, output_html="Mitochondrial_Heteroplasmy.html"):
     # Load data
     data = pd.read_csv(tsv_file, sep='\t')
-    mt_length = 16569
+    MT_LENGTH = 16569
 
     fig = go.Figure()
 
@@ -19,7 +19,7 @@ def plot_heteroplasmy(tsv_file, output_html="Mitochondrial_Heteroplasmy.html"):
     for sample in samples:
         positions = data['Position']
         heteroplasmies = data[sample].apply(clean_and_convert)
-        thetas = positions / mt_length * 360
+        thetas = positions / MT_LENGTH * 360
 
         hover_texts = [
             f"Sample: {sample}<br>Pos: {pos}<br>Heteroplasmy: {het*100:.2f}%"
@@ -49,8 +49,8 @@ def plot_heteroplasmy(tsv_file, output_html="Mitochondrial_Heteroplasmy.html"):
     ]
 
     for gene, start, end in genes:
-        start_angle = start / mt_length * 360
-        end_angle = end / mt_length * 360
+        start_angle = start / MT_LENGTH * 360
+        end_angle = end / MT_LENGTH * 360
         
         thetas = np.linspace(start_angle, end_angle, 100)
         rs = [1.05] * len(thetas)
@@ -107,4 +107,3 @@ if __name__ == "__main__":
 
     tsv_file = sys.argv[1]
     plot_heteroplasmy(tsv_file)
-

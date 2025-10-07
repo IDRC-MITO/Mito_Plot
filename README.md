@@ -5,6 +5,9 @@ Variant Plot Considering All Heterozygosity Rates in Large-Scale Samples
 
 This repository contains scripts to calculate mitochondrial DNA heteroplasmy from VCF files and visualize the results in an interactive circular plot.
 
+In addition to the original 2D interactive plots which allow free zooming and panning, the tool now supports generating interactive 3D circular plots.
+This enhancement enables detailed visualization of aggregated variants and heteroplasmy rates across large cohorts, providing better insight into complex mutation patterns that were difficult to explore with previous 2D-only visualizations.
+
 ## Files
 
 - `step1.py`:  

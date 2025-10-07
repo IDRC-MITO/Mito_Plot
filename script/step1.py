@@ -99,4 +99,3 @@ if __name__ == "__main__":
     print(f"Results saved to '{output_filename}'.")
     print(f"Number of processed samples: {len(all_results)}")
     print(f"Total number of variants: {len(positions)}")
-

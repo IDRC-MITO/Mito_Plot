@@ -123,7 +123,7 @@ def plot_heteroplasmy_circular_3d_compact_z(tsv_file, output_html="Mitochondrial
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python run_3D_circular_compactz.py <heteroplasmy_tsv_file>")
+        print("Usage: python step3.py <heteroplasmy_tsv_file>")
         sys.exit(1)
 
     tsv_file = sys.argv[1]

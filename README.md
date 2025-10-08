@@ -26,8 +26,11 @@ This enhancement enables detailed visualization of aggregated variants and heter
 
 1. Prepare a directory containing your mitochondrial VCF files named like `sample1_chrM.vcf`.
 
-2. Run step 1 to generate the merged TSV file:
+2. Run step Plotting a 2D Plot:
 python step2.py All_YYYMMDD.tsv
+
+3. Run step Plotting a 3D Plot:
+python step3.py All_YYYMMDD.tsv
 
 
 [MT_Plot_Sample_2D.pdf](https://github.com/user-attachments/files/22736247/MT_Plot_Sample_2D.pdf)

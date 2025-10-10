@@ -11,14 +11,17 @@ This enhancement enables detailed visualization of aggregated variants and heter
 
 ## Files
 
-- `step1.py`:  
+- `step1.py`:
+  
   Processes multiple mitochondrial VCF files (*.vcf) to calculate heteroplasmy rates at each variant position. Outputs a merged TSV file summarizing heteroplasmy rates per sample and position.
 
-- `step2.py`:  
+- `step2.py`:
+   
   Loads the merged TSV from run_step1.py and generates an interactive Plotly circular plot showing heteroplasmy rates by position with mitochondrial gene regions annotated.
   This script creates a 2D figure, where zoom in/out and panning on desired regions are freely possible for detailed inspection.
 
-- `step3.py`:  
+- `step3.py`:
+  
   Loads the merged TSV from run_step1.py and generates an interactive 3D circular plot representing heteroplasmy rates across samples.
   The plot positions samples along the Z-axis with compressible height for better visualization of multiple samples and mitochondrial gene regions annotated in 3D.
   The Volume_dot 3D Result can be viewed.

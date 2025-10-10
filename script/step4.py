@@ -1,3 +1,4 @@
+import sys
 import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
@@ -50,8 +51,7 @@ def gene_center_camera_pos_and_center(gene, genes, MT_LENGTH, distance=0.7, heig
             return eye, center, up
     return dict(x=2.2, y=2.2, z=1.5), dict(x=0, y=0, z=0), dict(x=0, y=0, z=1)
 
-def create_figure(selected_gene=None):
-    tsv_file = "All_20250117.tsv"  #change Path
+def create_figure(tsv_file, selected_gene=None):
     data = pd.read_csv(tsv_file, sep='\t')
     MT_LENGTH = 16569
     samples = data.columns[4:]
@@ -87,23 +87,17 @@ def create_figure(selected_gene=None):
     max_line_width = 6.0
     min_line_width = 0.5
 
-    # 曲線のトレースを作成しつつ、全体のインデックス管理
-    scatter_indices = []
     for i, pos in enumerate(positions):
         theta = thetas[i]
         z_height = z_curve[i]
         het_values = np.sort(het_matrix[i, :])
         het_values = het_values[het_values > 0]
         if len(het_values) == 0:
-            scatter_indices.append(None)
             continue
 
         region_gene = position_to_gene(pos, genes, MT_LENGTH)
         base_color = gene_colors.get(region_gene, "#000000") if region_gene else "#000000"
-
-        # 選択された遺伝子かどうか判定
-        visible_bool = True if (selected_gene is None or selected_gene == "" or region_gene == selected_gene) else False
-        factor = 0.6 if visible_bool else 0.3
+        factor = 0.3 if (selected_gene and region_gene != selected_gene) else 0.6
         color = darken_color(base_color, factor=factor)
 
         r_values = het_values * (1 - min_inner_radius) + min_inner_radius
@@ -114,7 +108,9 @@ def create_figure(selected_gene=None):
         normalized_z = z_height / desired_max_height if desired_max_height > 0 else 0
         line_width = normalized_z * (max_line_width - min_line_width) + min_line_width
 
-        trace = go.Scatter3d(
+        visible_bool = True if (selected_gene is None or selected_gene == "" or region_gene == selected_gene) else False
+
+        fig.add_trace(go.Scatter3d(
             x=x_values, y=y_values, z=z_values,
             mode="lines",
             line=dict(color=color, width=line_width),
@@ -127,11 +123,8 @@ def create_figure(selected_gene=None):
             ),
             visible=visible_bool,
             showlegend=False
-        )
-        fig.add_trace(trace)
-        scatter_indices.append(trace)
+        ))
 
-    # 遺伝子領域のMesh3dトレースを追加
     for gene, start, end in genes:
         start_theta = start / MT_LENGTH * 2 * np.pi
         end_theta = end / MT_LENGTH * 2 * np.pi
@@ -207,17 +200,22 @@ def create_figure(selected_gene=None):
             aspectmode='data',
             camera=dict(eye=eye, center=center, up=up),
         ),
-        title="Radial Heteroplasmy (Internal Curves for Multiple Samples)",
+        title="Mitochondrial Heteroplasmy Radial 3D Plot",
         margin=dict(l=0, r=0, b=0, t=50),
         paper_bgcolor="white",
     )
 
     return fig
 
-
 app = Dash(__name__)
 
-gene_options = [{"label": "ALL", "value": ""}]
+if len(sys.argv) < 2:
+    print("Usage: python step4.py <heteroplasmy_tsv_file>")
+    sys.exit(1)
+
+tsv_file = sys.argv[1]
+
+gene_options = [{"label": "All", "value": ""}]
 genes_list = [
     "D-loop", "MT-RNR1", "MT-RNR2", "MT-ND1", "MT-ND2", "MT-CO1", "MT-CO2",
     "MT-ATP8", "MT-ATP6", "MT-CO3", "MT-ND3", "MT-ND4L", "MT-ND4", "MT-ND5",
@@ -244,7 +242,7 @@ app.layout = html.Div([
 )
 def update_figure(selected_gene):
     gene = selected_gene if selected_gene != "" else None
-    return create_figure(gene)
+    return create_figure(tsv_file, gene)
 
 if __name__ == "__main__":
     app.run(debug=True)

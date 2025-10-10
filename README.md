@@ -35,7 +35,14 @@ python step3.py All_YYYMMDD.tsv
 
 [MT_Plot_Sample_2D.pdf](https://github.com/user-attachments/files/22736247/MT_Plot_Sample_2D.pdf)
 
-[MT_Plot_Sample_3D.pdf](https://github.com/user-attachments/files/22736176/MT_Plot_Sample_3D.pdf)
+[MT_Plot_Sample_3D_Volume_dot.pdf](https://github.com/user-attachments/files/22842773/MT_Plot_Sample_3D_Volume_dot.pdf)
+
+[MT_Plot_Sample_3D_Line.pdf](https://github.com/user-attachments/files/22842769/MT_Plot_Sample_3D_Line.pdf)
+
+[MT_Plot_Sample_3D_Line_Region.pdf](https://github.com/user-attachments/files/22842764/MT_Plot_Sample_3D_Line_Region.pdf)
+
+
+
 
 
 

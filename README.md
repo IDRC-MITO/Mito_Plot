@@ -37,6 +37,8 @@ python step3.py All_YYYMMDD.tsv
 
 [MT_Plot_Sample_3D.pdf](https://github.com/user-attachments/files/22736176/MT_Plot_Sample_3D.pdf)
 
+https://github.com/IDRC-MITO/Mito_Plot/blob/main/Mito_Heteroplasmy_Radial3D_Height_Lines.html
+
 
 ## Input File Specification
 

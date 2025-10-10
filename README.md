@@ -40,8 +40,11 @@ This enhancement enables detailed visualization of aggregated variants and heter
 2. Run step Plotting a 2D Plot:
 python step2.py All_YYYMMDD.tsv
 
-3. Run step Plotting a 3D Plot:
+3. Run step Plotting a 3D Plot(Dot_Plot):
 python step3.py All_YYYMMDD.tsv
+
+4. Run step Plotting a 3D Plot(Line):
+python step4.py All_YYYMMDD.tsv
 
 
 [MT_Plot_Sample_2D.pdf](https://github.com/user-attachments/files/22736247/MT_Plot_Sample_2D.pdf)
@@ -51,15 +54,6 @@ python step3.py All_YYYMMDD.tsv
 [MT_Plot_Sample_3D_Line.pdf](https://github.com/user-attachments/files/22842769/MT_Plot_Sample_3D_Line.pdf)
 
 [MT_Plot_Sample_3D_Line_Region.pdf](https://github.com/user-attachments/files/22842764/MT_Plot_Sample_3D_Line_Region.pdf)
-
-
-
-
-
-
-
-
-
 
 ## Input File Specification
 

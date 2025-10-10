@@ -21,6 +21,9 @@ This enhancement enables detailed visualization of aggregated variants and heter
 - `step3.py`:  
   Loads the merged TSV from run_step1.py and generates an interactive 3D circular plot representing heteroplasmy rates across samples.
   The plot positions samples along the Z-axis with compressible height for better visualization of multiple samples and mitochondrial gene regions annotated in 3D.
+  The Volume_dot 3D Result can be viewed.
+
+- `step4.py`: 
 
 ## Usage
 

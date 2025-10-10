@@ -37,6 +37,8 @@ python step3.py All_YYYMMDD.tsv
 
 [MT_Plot_Sample_3D.pdf](https://github.com/user-attachments/files/22736176/MT_Plot_Sample_3D.pdf)
 
+file:///Users/kohtanakamuta/Desktop/論文/ミトコンドリアバリアント_Plot/Mito_Heteroplasmy_Radial3D_Height_Lines.html
+<img width="1069" height="39" alt="image" src="https://github.com/user-attachments/assets/0bff7c66-e0af-473d-9a95-262823817ece" />
 
 
 

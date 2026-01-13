@@ -35,7 +35,7 @@ This enhancement enables detailed visualization of aggregated variants and heter
 
 ## Usage
 
-1. Prepare a directory containing your mitochondrial VCF files named like `sample1_chrM.vcf`.
+1. Prepare a directory containing your mitochondrial VCF files named like `sample1_chrM.vcf`. : python step1.py /path/to/vcf_directory [--output output.tsv]
 
 2. Run step Plotting a 2D Plot:
 python step2.py All_YYYMMDD.tsv

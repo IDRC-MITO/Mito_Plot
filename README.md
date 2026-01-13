@@ -33,6 +33,12 @@ This enhancement enables detailed visualization of aggregated variants and heter
   The application accepts input TSV files via command-line arguments, enabling flexible data usage.
   Users can view detailed heteroplasmy rates and variant counts by hovering over data points, and interactively explore different gene regions for comprehensive mitochondrial variant analysis.
 
+## Test_Data
+  We have prepared two files: small_sample and large_sample.The small_sample dataset consists of 5 samples and should be used as the main test dataset.
+For this dataset, a VCF file has been prepared.
+The large_sample dataset contains data from 116 individuals that have already been processed.
+Please start from Step 2 using the large_sample dataset.
+
 ## Usage
 
 1. Prepare a directory containing your mitochondrial VCF files named like `sample1_chrM.vcf`. : python step1.py /path/to/vcf_directory [--output output.tsv]

@@ -6,7 +6,7 @@ Merges heteroplasmy rates across multiple chrM VCF files into a TSV matrix.
 Supports both uncompressed and gzipped VCF files.
 
 Usage:
-    python heteroplasmy_calculator.py /path/to/vcf_directory [--output output.tsv]
+    python step1.py /path/to/vcf_directory [--output output.tsv]
 
 Arguments:
     input_dir    Directory containing *chrM.vcf or *chrM.vcf.gz files

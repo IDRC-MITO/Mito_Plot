@@ -41,8 +41,8 @@ encoding heteroplasmy levels radially and sample prevalence vertically.
 ## Installation
 
 clone the repository:
-git clone https://github.com/Nakamara/Mito_Plot.git
-cd mtdna-heteroplasmy-viewer
+git clone https://github.com/IDRC-MITO/Mito_Plot.git
+cd Mito_Plot 
 
 
 ## Files

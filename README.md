@@ -37,6 +37,7 @@ This tool maps variant positions onto the human mitochondrial genome (rCRS), enc
 
 clone the repository:
 git clone https://github.com/IDRC-MITO/Mito_Plot.git
+
 cd Mito_Plot 
 
 
